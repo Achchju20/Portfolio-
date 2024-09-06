@@ -1,134 +1,162 @@
+import Project1 from "../img/proj1.png";
+import Project2 from "../img/proj2.png";
+import Project3 from "../img/proj3.png";
+import Project4 from "../img/proj4.png";
+import Project5 from "../img/proj5.png";
+import come from "../img/proj6.png";
+import mouse  from '../mp3/mouse.mp3';
 
-import pic from '..//img/1p.png';
-export default function Pro(){
-    return <section className=" flex flex-col py-5 px-5 justify-center">
+const playSound = (sound) => {
+  const audio = new Audio(mouse);
+  audio.play();
+};
 
-       <div className='text-center py-16'>
-    <h1 className='text-5xl font-bold border-2  border-black text-center p-4 rounded-full max-w-max mx-auto  hover:text-yellow-500'>
-      Projects
-    </h1>
-
-    </div>
-    <div className="py-20"> {/* Flex container with smaller vertical spacing */}
-  
-      {/* 1st Box */}
-      <div class="  grid place-items-center font-mono">
-        <div class="rounded bg-gray-800 shadow-2xl">
-          <div class="md:flex px-4 leading-none max-w-4xl">
-            <div class="flex-none">
-              <img
-                src={pic}
-                class="h-82 w-40 rounded shadow-4xl transform -translate-y-6 border-2 border-gray-300 shadow-lg"
-              />
-            </div>
-            <div class="flex-col text-gray-300">
-              <p class="pt-4 text-2xl font-bold">Joker (2020)</p>
-              <hr class="hr-text" data-content=""/>
-              <div class="text-md flex justify-between px-4 my-2">
-                <span class="font-bold">2h 2min | Crime, Drama, Thriller</span>
-              </div>
-              <p class="hidden md:block px-4 my-4 text-sm text-left">
-                In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.
-              </p>
-              <div class="text-xs py-10 pr-32">
-                <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">TRAILER</button>
-                <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">IMDB</button>
-                <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">AMAZON</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      {/* 2nd Box */}
-      <div class="py-20  grid place-items-center font-mono">
-    <div class="rounded bg-gray-800 shadow-2xl">
-        <div class="md:flex px-4 leading-none max-w-4xl">
-            <div class="flex-col text-gray-300 flex-grow">
-                <p class="pt-4 text-2xl font-bold">Joker (2020)</p>
-                <hr class="hr-text" data-content="" />
-                <div class="text-md flex justify-between px-4 my-2">
-                    <span class="font-bold">2h 2min | Crime, Drama, Thriller</span>
+export default function Pro() {
+    return (
+        <section className="bg-white dark:bg-gray-900 ">
+            <div className="container py-12 mx-auto">
+                <div className="text-center">
+                    <h1 className="text-3xl font-bold text-gray-800 capitalize lg:text-4xl dark:text-white bg-red-500 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center hover:bg-red-600 transition-colors">
+              
+                        My Projects
+                    </h1>
+                    <p className="max-w-lg mx-auto mt-4 text-gray-500 dark:text-gray-400">
+                        Designing with users in mind, every step of the way.
+                    </p>
                 </div>
-                <p class="hidden md:block px-4 my-4 text-sm text-left">
-                    In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.
-                </p>
-                <div class="text-xs py-10 pr-32">
-                    <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">TRAILER</button>
-                    <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">IMDB</button>
-                    <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">AMAZON</button>
+
+                <div className="grid grid-cols-1 gap-12 mt-10 md:grid-cols-2 xl:grid-cols-3">
+                    {/* Project 1 */}
+                    <div className="bg-gray-300 p-4 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg flex flex-col  hover:bg-red-400 transition-colors">
+                        <div className="relative overflow-hidden rounded-lg bg-white dark:bg-gray-800">
+                            <img 
+                                className="object-cover object-center w-full h-64 rounded-lg lg:h-80" 
+                                src={Project1} 
+                                alt="Free Rental Project" 
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 rounded-t-lg">
+                                <h2 className="text-xl font-semibold text-white">
+                                    Free Rental
+                                </h2>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-between p-4 bg-white dark:bg-gray-800 rounded-b-lg ">
+                            
+                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                                A free rental app helps users find and list rental properties at no cost. It connects property owners with renters through an easy-to-use platform. Users can search for places, message landlords, and manage bookings all in one place.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Project 2 */}
+                    <div className="bg-gray-300 p-4 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg flex flex-col  hover:bg-red-400 transition-colors">
+                        <div className="relative overflow-hidden rounded-lg bg-white dark:bg-gray-800">
+                            <img 
+                                className="object-cover object-center w-full h-64 rounded-lg lg:h-80" 
+                                src={Project2} 
+                                alt="Food Delivery Project" 
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 rounded-t-lg">
+                                <h2 className="text-xl font-semibold text-white">
+                                    Food Delivery
+                                </h2>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-between p-4 bg-white dark:bg-gray-800 rounded-b-lg ">
+                          
+                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            Order your favorite meals from local restaurants with our app! Browse, customize, and track in real-time with a few taps. Enjoy fast, convenient, and delicious food delivery straight to your doorstep."</p>
+                            
+                            </div>
+                    </div>
+
+                    {/* Project 3 */}
+                    <div className="bg-gray-300 p-4 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg flex flex-col   hover:bg-red-400 transition-colors">
+                        <div className="relative overflow-hidden rounded-lg bg-white dark:bg-gray-800">
+                            <img 
+                                className="object-cover object-center w-full h-64 rounded-lg lg:h-80" 
+                                src={Project3} 
+                                alt="Skill Development Project" 
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 rounded-t-lg">
+                                <h2 className="text-xl font-semibold text-white">
+                                    Skill Development
+                                </h2>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-between p-4 bg-white dark:bg-gray-800 rounded-b-lg ">
+                        
+                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                                A skill development app helps users learn and improve skills through interactive lessons and practice. It offers courses and tools for various abilities. The app tracks progress and provides feedback for continuous growth.
+                            </p>
+                        </div>
+                    </div>
+                    {/* Project 4 */}
+                    <div className="bg-gray-300 p-4 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg flex flex-col  hover:bg-red-400 transition-colors">
+                        <div className="relative overflow-hidden rounded-lg bg-white dark:bg-gray-800">
+                            <img 
+                                className="object-cover object-center w-full h-64 rounded-lg lg:h-80" 
+                                src={Project4} 
+                                alt="Food Delivery Project" 
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 rounded-t-lg">
+                                <h2 className="text-xl font-semibold text-white">
+                                   Car Rental
+                                </h2>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-between p-4 bg-white dark:bg-gray-800 rounded-b-lg ">
+                           
+                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            Rent a car effortlessly with our app! Browse, compare, and book from a wide range of vehicles in just a few taps. Enjoy flexible rentals and real-time tracking for a smooth, convenient ride.                            </p>
+                        </div>
+                    </div>
+                    {/* Project 5 */}
+                    <div className="bg-gray-300 p-4 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg flex flex-col  hover:bg-red-400 transition-colors">
+                        <div className="relative overflow-hidden rounded-lg bg-white dark:bg-gray-800">
+                            <img 
+                                className="object-cover object-center w-full h-64 rounded-lg lg:h-80" 
+                                src={Project5} 
+                                alt="Food Delivery Project" 
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 rounded-t-lg">
+                                <h2 className="text-xl font-semibold text-white">
+                                    X-eat 
+
+                                </h2>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-between p-4 bg-white dark:bg-gray-800 rounded-b-lg ">
+                        
+                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            Craving something delicious? Our app connects you to the best local restaurants, letting you order and track your meal with ease. Get your food delivered fast, fresh, and right to your door!
+
+</p>
+                        </div>
+                    </div>
+                {/* Project 6 */}
+                <div className="bg-gray-300 p-4 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg flex flex-col  hover:bg-red-400 transition-colors">
+                        <div className="relative overflow-hidden rounded-lg bg-white dark:bg-gray-800">
+                            <img 
+                                className="object-cover object-center w-full h-64 rounded-lg lg:h-80" 
+                                src={come} 
+                                alt="Food Delivery Project" 
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 rounded-t-lg">
+                                <h2 className="text-xl font-semibold text-white">
+                                    train tickets bookings
+                                </h2>
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-between p-4 bg-white dark:bg-gray-800 rounded-b-lg ">
+                            
+                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            Book train tickets effortlessly with our app! Search routes, choose seats, and track your journey in real-time with just a few taps. Enjoy a fast, convenient, and seamless ticket booking experience today!                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="flex-none">
-                <img
-                    src={pic}
-                    class="h-82 w-40 rounded shadow-4xl transform -translate-y-6 border-2 border-gray-300 shadow-lg"
-                />
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="  grid place-items-center font-mono">
-        <div class="rounded bg-gray-800 shadow-2xl">
-          <div class="md:flex px-4 leading-none max-w-4xl">
-            <div class="flex-none">
-              <img
-                src={pic}
-                class="h-82 w-40 rounded shadow-4xl transform -translate-y-6 border-2 border-gray-300 shadow-lg"
-              />
-            </div>
-            <div class="flex-col text-gray-300">
-              <p class="pt-4 text-2xl font-bold">Joker (2020)</p>
-              <hr class="hr-text" data-content=""/>
-              <div class="text-md flex justify-between px-4 my-2">
-                <span class="font-bold">2h 2min | Crime, Drama, Thriller</span>
-              </div>
-              <p class="hidden md:block px-4 my-4 text-sm text-left">
-                In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.
-              </p>
-              <div class="text-xs py-10 pr-32">
-                <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">TRAILER</button>
-                <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">IMDB</button>
-                <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">AMAZON</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      {/* 2nd Box */}
-      <div class="py-20  grid place-items-center font-mono">
-    <div class="rounded bg-gray-800 shadow-2xl">
-        <div class="md:flex px-4 leading-none max-w-4xl">
-            <div class="flex-col text-gray-300 flex-grow">
-                <p class="pt-4 text-2xl font-bold">Joker (2020)</p>
-                <hr class="hr-text" data-content="" />
-                <div class="text-md flex justify-between px-4 my-2">
-                    <span class="font-bold">2h 2min | Crime, Drama, Thriller</span>
-                </div>
-                <p class="hidden md:block px-4 my-4 text-sm text-left">
-                    In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.
-                </p>
-                <div class="text-xs py-10 pr-32">
-                    <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">TRAILER</button>
-                    <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">IMDB</button>
-                    <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">AMAZON</button>
-                </div>
-            </div>
-            <div class="flex-none">
-                <img
-                    src={pic}
-                    class="h-82 w-40 rounded shadow-4xl transform -translate-y-6 border-2 border-gray-300 shadow-lg"
-                />
-            </div>
-        </div>
-    </div>
-</div>
-
-  
-
-  
-    </div>
-  </section>
-}  
+        </section>
+    );
+}

@@ -65,3 +65,19 @@ body {
   color: #818078;
   background-color: #fcfcfa;
 }
+
+Copy code
+.custom-border {
+    border-left: 2px solid #a3a3a3; /* Adjust thickness and color as needed */
+    border-right: 2px solid #a3a3a3; /* Same for the right side */
+    border-top: none; /* Remove the top border */
+    border-bottom: none; /* Remove the bottom border */
+    border-radius: 50px; /* Rounded corners, adjust as needed */
+}
+/* In your global CSS file or inline styles */
+.dark .bg-primary {
+  background-color: #1f2937; /* Dark background color */
+}
+.dark .text-white {
+  color: #f9fafb; /* Light text color */
+}

@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './page/about';
 import Footar from './page/footer';
 import Header from './page/header';
@@ -7,15 +8,19 @@ import Pro from './page/project';
 
 function App() {
   return (
-    <div className="App">
-       <Header/>
-       <Index/>
-       <About/>
-       <Pro/>
-       <Footar/>
-      
-      
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Pro />} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/Footer" element={<Footar />} />
+        </Routes>
+
+      </div>
+    </Router>
   );
 }
 
