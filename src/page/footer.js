@@ -50,6 +50,10 @@ export default function Foot() {
                 <MdOutlineRocketLaunch className="mr-2 text-5xl" />
               </a>
             </motion.div>
+
+
+
+            
           </div>
           <div className="flex flex-col mt-24">
             <div className="flex mb-12 flex-col md:flex-row justify-between items-center text-center">
@@ -102,7 +106,7 @@ export default function Foot() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.1 }}
             >
-              © 2024 Achchjuthan Sarveswaran. All rights reserved.
+             This page is created using React and styled with Tailwind CSS -2024- 
             </motion.p>
           </div>
         </div>

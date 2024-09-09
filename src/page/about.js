@@ -16,7 +16,7 @@ export default function About() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/projects'); // Adjust the route to your projects page
+    navigate('/about'); // Adjust the route to your projects page
   };
 
   const darkModeClass = darkMode ? 'dark' : '';
